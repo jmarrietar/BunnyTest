@@ -74,7 +74,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"x":"0","y":"1000000"}' ht
 ```
 ![alt text][culr]
 
-[culr: https://github.com/jmarrietar/BunnyTest/blob/master/images/curl.png "Curl"
+[culr]:  https://github.com/jmarrietar/BunnyTest/blob/master/images/curl.png "Curl"
 
 It is returned to me in a JSON format the Total Number of Palindromes found. The values of the Palindromes numbers found in Decimal and Binary format and the total cycles needed. 
 
