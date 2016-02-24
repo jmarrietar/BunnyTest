@@ -1,11 +1,6 @@
 # BunnyTest: Palindrome challenge
 ---------------------- 
 
-### Table of Contents
-**[How I did it:](#how-i-did-it:)**  
-**[CODE](#code)**  
-
-
 ##My Solution:  
 
 #####Here is my code -> [CODE LINK](../master/src/java/com/virchgrave/serviceResource.java) 
@@ -147,6 +142,8 @@ The two Java Functions  code and  their complexity is listed below:
 
 ```
 
+fn(n)=logn +10<br>
+
 
 ```java
 /*Complexity Reverse */
@@ -185,3 +182,12 @@ The two Java Functions  code and  their complexity is listed below:
     }
 
 ```
+
+The complexity for this Java routine is <br>
+   f(n)= 1+1+n(1+1+1+1+1+1)+1+(n+1)(1+1+1+1+1+1) <br>
+   f(n)=2+6n+1+(n+1)(6) <br>
+   f(n)= 2+6n+1+6n+6 <br>
+   f(n)= 12n+9 <br>
+   O(n)=n  <br>
+
+
