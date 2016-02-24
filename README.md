@@ -14,7 +14,7 @@ I made the decision to use Java as my language for the algorithm and  later need
 
 First I made a function that check if a number is a Palindrome. Second a for sentence the x to y numbers and check first if the decimal number if a palindrome, if that is the case, it will check if the binary of the number is a palindrome. If the two conditions are true it is added to a Json Object (number in binary and decimal format).Lastly, I count the times this happens in total  and added this information to the Json Object as well. When the for condition ends, i return the Json object. 
 
-##CODE
+#CODE
 I used a built in function in java that reverse strings and another that convert decimal to binary. 
 
 IsPalindrome function 
