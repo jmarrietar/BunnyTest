@@ -1,13 +1,12 @@
 # BunnyTest: Palindrome challenge
 ---------------------- 
 
-# Table of Contents
-<b><a href="#Feedback">Feedback on test</a></b>
-<b><a href="#features">Features</a></b>
-<br>
+### Table of Contents
+**[How I did it: ](#How I did it:)**  
+**[CODE](#CODE)**  
 
 
-##How I did it :  
+#How I did it:  
 
 #####Here is my code -> [CODE LINK](../master/src/java/com/virchgrave/serviceResource.java) 
 
@@ -91,7 +90,7 @@ It is returned to me in a JSON format the Total Number of Palindromes found. The
 I code this mostly on nights but I feel this test was very fun and kind of challenge because i needed to pick up pieces of information i didn't remembered very well (POST, CURL , Algorithm Complexity ) and put it all together to get something kind of working in a short period of time. 
 
 
-Resources 
+##Resources 
 [1] [RESTful Java Web Services with NetBeans, Jersey and Tomcat](http://vichargrave.com/restful-web-service-development-with-netbeans-and-tomcat-tutorial/)
 
 
