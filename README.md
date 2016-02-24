@@ -5,11 +5,13 @@
 ---------------------- 
 
 # Table of Contents
+<b><a href="#Feedback">Feedback on test</a></b>
+|
+<b><a href="#features">Features</a></b>
 
-* [Feedback on Test](#Feedback on test:)
+<br>
 
-# <a name="team-members"></a>Team Members
-* "J. Jesus. P. Aguinaga" <admin@listforks.com>
+
 
 Here is my code —- LINK.
 
