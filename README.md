@@ -25,14 +25,18 @@ It returns true if number is a palindrome and false otherwise.
 
 ```java
     public static boolean isPalindrome(String numero) {
-        StringBuffer NumeroBuffer = new StringBuffer(numero);
-        String reverse = NumeroBuffer.reverse().toString();
-        if (numero.equals(reverse)) {
-            return true;
+        StringBuffer NumeroBuffer = new StringBuffer(numero);      // executed in constant 1
+        String reverse = NumeroBuffer.reverse().toString();        // executed in 12n+9 -> See Anexo1
+        if (numero.equals(reverse)) {                              // executed in constant 1 
+            return true;                                           // executed in constant 1 
         }
-        return false;
+        return false;                                               // executed in constant 1 
     }
 ```
+The Complexity for this function is 
+    f(n)= 1+12n+9+1+1+1
+    f(n)= 12n+13
+    O(n)=n 
 
 ######Main function and json Object 
 It resieves Json format with x and y values and check palindromes(in decimal and binary format) between that range. The result is returned in JSON format. 
@@ -45,17 +49,19 @@ It resieves Json format with x and y values and check palindromes(in decimal and
         
         TreeMap palindromos = new TreeMap();
         
-        int cicle = 0;
-        int count = 0;
-        int inicio = Integer.parseInt(JoseObject.getString("x"));
-        int fin = Integer.parseInt(JoseObject.getString("y"));
+        int cicle = 0;                                               // executed in constant time 1
+        int count = 0;                                               // executed in constant time 1
+        int inicio = Integer.parseInt(JoseObject.getString("x"));    // executed in constant time 1
+        int fin = Integer.parseInt(JoseObject.getString("y"));       // executed in constant time 1
+
+                                                                //loop will be executed n 
         for (int i = inicio; i <= fin; i++) {
-            cicle++;
-            if (isPalindrome(String.valueOf(i))) {                    // check if number is palindrome 
-                String binario = Integer.toString(i, 2);
-                if (isPalindrome(binario)) {                          // check if binary of number is palindrome 
-                    palindromos.put(Integer.toString(i), binario);    // add 
-                    count++;
+            cicle++;                                             // executed in constant time 1
+            if (isPalindrome(String.valueOf(i))) {               // executed in 12n+13 time  check if number is palindrome 
+                String binario = Integer.toString(i, 2);            //executed in logn + 10 
+                if (isPalindrome(binario)) {                          //executed in 12n+13 time  check if binary of number is palindrome 
+                    palindromos.put(Integer.toString(i), binario);     // executed in constant time 1
+                    count++;                                             // executed in constant time 1
                 }
             }
         }
@@ -64,10 +70,13 @@ It resieves Json format with x and y values and check palindromes(in decimal and
         jsonObjectRespuesta.put("Numero Palindromos", count);
         jsonObjectRespuesta.put("Numero Ciclos", cicle);
 ```
+f(n)= 1+1+1+1+n(1+12n+13+logn+10 +12n+13+1+1)+1+1+1
+f(n)= 7+n+12n^2+13n+nlogn+10n+12n^2+13n+n+n
+f(n)=24n^2+29n+nlogn
 
 
 ##Complexity 
-The Complexity of my Algorithm is : 
+The Complexity of my Algorithm is O(n)= n^2+n+nlogn
 
 ##POST request
 Via curl and POST method a JSON format is sent with the values of x and y witch will be the minimum and maximum numbers the algorithm will search palindromes. 
