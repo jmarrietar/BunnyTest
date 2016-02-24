@@ -2,8 +2,8 @@
 ---------------------- 
 
 ### Table of Contents
-**[How I did it:](#How-I-did-it:)**  
-**[CODE](#CODE)**  
+**[How I did it:](#how-I-did-it:)**  
+**[CODE](#code)**  
 
 
 #How I did it:  
