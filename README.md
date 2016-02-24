@@ -72,18 +72,20 @@ Via curl and POST method i send in a JSON format the values of x and y with will
 ```batch
 curl -X POST -H "Content-Type: application/json" -d '{"x":"0","y":"1000000"}' http://localhost:8080/BunnyTest/webresources/service
 ```
-![alt text][culr]
-
-[culr]:  https://github.com/jmarrietar/BunnyTest/blob/master/images/curl.png "Curl"
 
 
-<img src="https://github.com/jmarrietar/BunnyTest/blob/master/images/curl.png" width="50%" height="50%"/>
+<div align="center">
+ <img src="https://github.com/jmarrietar/BunnyTest/blob/master/images/curl.png" width="50%" height="50%"/>
+</div>
+<br>
+
+##Result 
 It is returned to me in a JSON format the Total Number of Palindromes found. The values of the Palindromes numbers found in Decimal and Binary format and the total cycles needed. 
 
-![alt text][logo]
-
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
-
+<div align="center">
+<img src="https://github.com/jmarrietar/BunnyTest/blob/master/images/curl.png" width="50%" height="50%"/>
+</div>
+<br>
 
 ##Feedback on test: 
 I code this mostly on nights but I feel this test was very fun and kind of challenge because i needed to pick up pieces of information i didn't remembered very well (POST, CURL , Algorithm Complexity ) and put it all together to get something kind of working in a short period of time. 
