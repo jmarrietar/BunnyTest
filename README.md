@@ -83,7 +83,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"x":"0","y":"1000000"}' ht
 It is returned to me in a JSON format the Total Number of Palindromes found. The values of the Palindromes numbers found in Decimal and Binary format and the total cycles needed. 
 
 <div align="center">
-<img src="https://github.com/jmarrietar/BunnyTest/blob/master/images/curl.png" width="50%" height="50%"/>
+<img src="https://github.com/jmarrietar/BunnyTest/blob/master/images/json.png" width="50%" height="50%"/>
 </div>
 <br>
 
@@ -92,9 +92,7 @@ I code this mostly on nights but I feel this test was very fun and kind of chall
 
 
 Resources 
--
--
-
+[1] [RESTful Java Web Services with NetBeans, Jersey and Tomcat](http://vichargrave.com/restful-web-service-development-with-netbeans-and-tomcat-tutorial/)
 
 
 ANEXO 1 
