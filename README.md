@@ -11,12 +11,13 @@
 
 ##How I did it :  
 
-Here is my code ->[CODE LINK](../blob/master/src/java/com/virchgrave/serviceResource.java) 
+#####Here is my code -> [CODE LINK](../master/src/java/com/virchgrave/serviceResource.java) 
 
-I made the decision to use Java as my language for the algorithm and  later needed to research a little how to make REST API in JAVA with apache. (Resources). 
+I made the decision to use Java as my language for the algorithm and  later needed to research a little how to make REST API in JAVA with apache and made the configurations.<sup>[1]</sup>
 
-First I made a function that check if a number is a palindrome. Second a for sentence the x to y numbers and check first if the decimal number if a palindrome, if that is the case, it will check if the binary of the number is a palindrome. If the two conditions are true it is added to a Json Object (number in binary and decimal format).Lastly, I count the times this happens in total  and added this information to the Json Object as well. When the for condition ends, i return the Json object. 
+First I made a function that check if a number is a Palindrome. Second a for sentence the x to y numbers and check first if the decimal number if a palindrome, if that is the case, it will check if the binary of the number is a palindrome. If the two conditions are true it is added to a Json Object (number in binary and decimal format).Lastly, I count the times this happens in total  and added this information to the Json Object as well. When the for condition ends, i return the Json object. 
 
+##CODE
 I used a built in function in java that reverse strings and another that convert decimal to binary. 
 
 IsPalindrome function 
@@ -65,14 +66,23 @@ Main function and json Object
 #Complexity 
 The Complexity of my Algorithm is : 
 
-
+#POST request
 Via curl and POST method i send in a JSON format the values of x and y with will be the minimum and maximum numbers the algorithm will search palindromes. 
 
--> Code
--> Image
+
+
+```batch
+curl -X POST -H "Content-Type: application/json" -d '{"x":"0","y":"1000000"}' http://localhost:8080/BunnyTest/webresources/service
+```
+![alt text][logo]
+
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
 
 It is returned to me in a JSON format the Total Number of Palindromes found. The values of the Palindromes numbers found in Decimal and Binary format and the total cycles needed. 
--> Image 
+
+![alt text][logo]
+
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
 
 
 ##Feedback on test: 
