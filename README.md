@@ -67,7 +67,7 @@ It resieves Json format with x and y values and check palindromes(in decimal and
 ##Complexity 
 The Complexity of my Algorithm is : 
 
-#POST request
+##POST request
 Via curl and POST method it is send a JSON format with the values of x and y witch will be the minimum and maximum numbers the algorithm will search palindromes. 
 
 
