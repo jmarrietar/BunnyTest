@@ -6,19 +6,21 @@
 **[CODE](#code)**  
 
 
-##How I did it:  
+##My Solution:  
 
 #####Here is my code -> [CODE LINK](../master/src/java/com/virchgrave/serviceResource.java) 
 
-I made the decision to use Java as my language for the algorithm and  later did a little research on how to make REST in JAVA with apache and did the configurations.<sup>[1]</sup>
+I made the decision to use Java as my language for the algorithm and needed to make some little research on how to make REST in JAVA with Apache and what it configuration was.<sup>[1]</sup>
 
-My approach was first make a function that check if a number is a **Palindrome**. Second, I implemented a  **for** sentence, from x to y numbers and check in each one if the number is a palindrome, if that is the case, it will check if the binary of that number is a *palindrome* too. If the **two** conditions are true it is added to a Json Object (number in binary and decimal format).Lastly, I count the times this happens in total  and added this information to the Json Object as well. When the for condition ends, it returns the Json object. 
+My approach was first, make a function that check if a number is a **Palindrome**. Second, I implemented a  **For** sentence, from x to y numbers and check in each one if the number is a palindrome, if that is the case, it will check if the binary of that number is a *palindrome* too. If the **two** conditions are true the number is added to a Json Object (in decimal an binary format) .Lastly, I count the times this procedure happens in total  and added this information to the Json Object as well. When the for condition ends, it returns the Json object. 
 
 ##CODE
-I used two built in function in java that reverse strings and another that convert decimal to binary. 
+
+Inside my Code used two built in function in java.One function to reverse strings and another function that convert decimal to binary. 
 
 
 ######IsPalindrome function 
+This function receives a number in a string format and uses a Java built in function to reverse the string and check if it is a Plindrome. 
 It returns true if number is a palindrome and false otherwise.
 
 ```java
@@ -33,7 +35,7 @@ It returns true if number is a palindrome and false otherwise.
 ```
 
 ######Main function and json Object 
-It resieves Json format with x and y values and check palindromes(in decimal and binary format) between that range. The result is in JSON format. 
+It resieves Json format with x and y values and check palindromes(in decimal and binary format) between that range. The result is returned in JSON format. 
 
 ```java
         JSONObject JoseObject = new JSONObject(content);
@@ -68,8 +70,7 @@ It resieves Json format with x and y values and check palindromes(in decimal and
 The Complexity of my Algorithm is : 
 
 ##POST request
-Via curl and POST method it is send a JSON format with the values of x and y witch will be the minimum and maximum numbers the algorithm will search palindromes. 
-
+Via curl and POST method a JSON format is sent with the values of x and y witch will be the minimum and maximum numbers the algorithm will search palindromes. 
 
 ```batch
 curl -X POST -H "Content-Type: application/json" -d '{"x":"0","y":"1000000"}' http://localhost:8080/BunnyTest/webresources/service
@@ -82,7 +83,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"x":"0","y":"1000000"}' ht
 <br>
 
 ##Result 
-It is returned to me in a JSON format the Total Number of Palindromes found. The values of the Palindromes numbers found in Decimal and Binary format and the total cycles needed. 
+It is returned in a JSON format the Total Number of Palindromes found. The values of the Palindromes numbers found in Decimal and Binary format and the total cycles needed. 
 
 <div align="center">
 <img src="https://github.com/jmarrietar/BunnyTest/blob/master/images/json.png" width="50%" height="50%"/>
@@ -90,7 +91,7 @@ It is returned to me in a JSON format the Total Number of Palindromes found. The
 <br>
 
 ##Feedback on test: 
-I code this mostly on nights but I feel this test was very fun and kind of challenge because i needed to pick up pieces of information i didn't remembered very well (POST, CURL , Algorithm Complexity ) and put it all together to get something kind of working in a short period of time. 
+I code this mostly on nights but I felt this test was very fun and kind of challenge because i needed to pick up pieces of information i didn't remembered very well (POST, CURL , Algorithm Complexity ) and put it all together to get something kind of working in a short period of time. 
 
 
 ##Resources 
@@ -99,7 +100,79 @@ I code this mostly on nights but I feel this test was very fun and kind of chall
 
 ##ANEXO 1 
 -------
-
 I use some Java Functions, so in order to know What the complexity of my algorithm was i needed first to check complexity for this java Functions. 
 
 The two Java Functions  code and  their complexity is listed below: 
+
+```java
+  public static String toString(int i, int radix) {
+
+        if (radix < Character.MIN_RADIX || radix > Character.MAX_RADIX)  // executed in constant time 1
+            radix = 10;                                                  // executed in constant time 1
+
+        /* Use the faster version */
+        if (radix == 10) {                                               // executed in constant time 1
+            return toString(i);                                           // executed in constant time 1
+        }
+
+        char buf[] = new char[33];                                          // executed in constant time 1
+        boolean negative = (i < 0);                                         // executed in constant time 1
+        int charPos = 32;                                                   // executed in constant time 1
+
+        if (!negative) {                                                        // executed in constant time 1
+            i = -i;                                                         // executed in constant time 1
+        }
+
+        while (i <= -radix) {
+            buf[charPos--] = digits[-(i % radix)];
+            i = i / radix;                                                    //i become half in each iteration. Radix is 2. 
+        }                                                                      // logn 
+        buf[charPos] = digits[-i];
+
+        if (negative) {                                                       // executed in constant time 1
+            buf[--charPos] = '-';                                            // executed in constant time 1
+        }
+
+        return new String(buf, charPos, (33 - charPos));
+    }
+
+```
+
+
+```java
+/*Complexity Reverse */
+ public AbstractStringBuilder reverse() {
+        boolean hasSurrogate = false;                // executed in constant time 1
+        int n = count - 1;                           // executed in constant time 1
+
+        //loop will be executed n-1 times    
+        for (int j = (n-1) >> 1; j >= 0; --j) {
+            char temp = value[j];                    // executed in constant time 1
+            char temp2 = value[n - j];               // executed in constant time 1
+            if (!hasSurrogate) {                     // executed in constant time 1
+                hasSurrogate = (temp >= Character.MIN_SURROGATE && temp <= Character.MAX_SURROGATE)    // executed in constant time 1
+                    || (temp2 >= Character.MIN_SURROGATE && temp2 <= Character.MAX_SURROGATE);
+            }
+            value[j] = temp2;                        // executed in constant time 1
+            value[n - j] = temp;                     // executed in constant time 1
+        }
+
+        if (hasSurrogate) {                           // executed in constant time 1
+            // Reverse back all valid surrogate pairs
+
+                     //loop will be executed n+1 times  
+            for (int i = 0; i < count - 1; i++) {
+                char c2 = value[i];                   // executed in constant time 1
+                if (Character.isLowSurrogate(c2)) {   // executed in constant time 1
+                    char c1 = value[i + 1];           // executed in constant time 1
+                    if (Character.isHighSurrogate(c1)) {    // executed in constant time 1
+                        value[i++] = c1;              // executed in constant time 1
+                        value[i] = c2;                // executed in constant time 1
+                    }
+                }
+            }
+        }
+        return this;
+    }
+
+```
