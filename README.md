@@ -37,7 +37,7 @@ It is returned to me in a JSON format the Total Number of Palindromes found. The
 -> Image 
 
 
-#Feedback on test: 
+##Feedback on test: 
 I code this mostly on nights but I feel this test was very fun and kind of challenge because i needed to pick up pieces of information i didn't remembered very well (POST, CURL , Algorithm Complexity ) and put it all together to get something kind of working in a short period of time. 
 
 
