@@ -6,18 +6,21 @@
 **[CODE](#code)**  
 
 
-#How I did it:  
+##How I did it:  
 
 #####Here is my code -> [CODE LINK](../master/src/java/com/virchgrave/serviceResource.java) 
 
-I made the decision to use Java as my language for the algorithm and  later needed to research a little how to make REST API in JAVA with apache and made the configurations.<sup>[1]</sup>
+I made the decision to use Java as my language for the algorithm and  later did a little research on how to make REST in JAVA with apache and did the configurations.<sup>[1]</sup>
 
-First I made a function that check if a number is a Palindrome. Second a for sentence the x to y numbers and check first if the decimal number if a palindrome, if that is the case, it will check if the binary of the number is a palindrome. If the two conditions are true it is added to a Json Object (number in binary and decimal format).Lastly, I count the times this happens in total  and added this information to the Json Object as well. When the for condition ends, i return the Json object. 
+My approach was first make a function that check if a number is a **Palindrome**. Second, I implemented a  **for** sentence, from x to y numbers and check in each one if the number is a palindrome, if that is the case, it will check if the binary of that number is a *palindrome* too. If the **two** conditions are true it is added to a Json Object (number in binary and decimal format).Lastly, I count the times this happens in total  and added this information to the Json Object as well. When the for condition ends, it returns the Json object. 
 
-#CODE
-I used a built in function in java that reverse strings and another that convert decimal to binary. 
+##CODE
+I used two built in function in java that reverse strings and another that convert decimal to binary. 
 
-IsPalindrome function 
+
+######IsPalindrome function 
+It returns true if number is a palindrome and false otherwise.
+
 ```java
     public static boolean isPalindrome(String numero) {
         StringBuffer NumeroBuffer = new StringBuffer(numero);
@@ -29,7 +32,8 @@ IsPalindrome function
     }
 ```
 
-Main function and json Object 
+######Main function and json Object 
+It resieves Json format with x and y values and check palindromes(in decimal and binary format) between that range. The result is in JSON format. 
 
 ```java
         JSONObject JoseObject = new JSONObject(content);
@@ -60,12 +64,11 @@ Main function and json Object
 ```
 
 
-#Complexity 
+##Complexity 
 The Complexity of my Algorithm is : 
 
 #POST request
-Via curl and POST method i send in a JSON format the values of x and y with will be the minimum and maximum numbers the algorithm will search palindromes. 
-
+Via curl and POST method it is send a JSON format with the values of x and y witch will be the minimum and maximum numbers the algorithm will search palindromes. 
 
 
 ```batch
@@ -94,7 +97,7 @@ I code this mostly on nights but I feel this test was very fun and kind of chall
 [1] [RESTful Java Web Services with NetBeans, Jersey and Tomcat](http://vichargrave.com/restful-web-service-development-with-netbeans-and-tomcat-tutorial/)
 
 
-ANEXO 1 
+##ANEXO 1 
 -------
 
 I use some Java Functions, so in order to know What the complexity of my algorithm was i needed first to check complexity for this java Functions. 
