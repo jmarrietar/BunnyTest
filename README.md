@@ -28,10 +28,10 @@ It returns true if number is a palindrome and false otherwise.
         return false;                                               // executed in constant 1 
     }
 ```
-The Complexity for this function is 
-    f(n)= 1+12n+9+1+1+1
-    f(n)= 12n+13
-    O(n)=n 
+The Complexity for this function is <br>
+    f(n)= 1+12n+9+1+1+1 <br>
+    f(n)= 12n+13 <br>
+    O(n)=n <br>
 
 ######Main function and json Object 
 It resieves Json format with x and y values and check palindromes(in decimal and binary format) between that range. The result is returned in JSON format. 
@@ -65,9 +65,9 @@ It resieves Json format with x and y values and check palindromes(in decimal and
         jsonObjectRespuesta.put("Numero Palindromos", count);
         jsonObjectRespuesta.put("Numero Ciclos", cicle);
 ```
-f(n)= 1+1+1+1+n(1+12n+13+logn+10 +12n+13+1+1)+1+1+1
-f(n)= 7+n+12n^2+13n+nlogn+10n+12n^2+13n+n+n
-f(n)=24n^2+29n+nlogn
+f(n)= 1+1+1+1+n(1+12n+13+logn+10 +12n+13+1+1)+1+1+1 <br>
+f(n)= 7+n+12n^2+13n+nlogn+10n+12n^2+13n+n+n <br>
+f(n)=24n^2+29n+nlogn <br>
 
 
 ##Complexity 
