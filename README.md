@@ -2,7 +2,7 @@
 ---------------------- 
 
 ### Table of Contents
-**[How I did it: ](#How I did it:)**  
+**[How I did it:](#How-I-did-it:)**  
 **[CODE](#CODE)**  
 
 
