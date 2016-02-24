@@ -1,6 +1,4 @@
-# <hr align="center"> BunnyTest </hr> 
-
-#Palindrome challenge:
+# BunnyTest: Palindrome challenge
 ---------------------- 
 
 # Table of Contents
@@ -74,9 +72,9 @@ Via curl and POST method i send in a JSON format the values of x and y with will
 ```batch
 curl -X POST -H "Content-Type: application/json" -d '{"x":"0","y":"1000000"}' http://localhost:8080/BunnyTest/webresources/service
 ```
-![alt text][logo]
+![alt text][culr]
 
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+[culr: https://github.com/jmarrietar/BunnyTest/blob/master/images/curl.png "Curl"
 
 It is returned to me in a JSON format the Total Number of Palindromes found. The values of the Palindromes numbers found in Decimal and Binary format and the total cycles needed. 
 
